@@ -1,0 +1,138 @@
+.btn {
+  margin-top: 40px;
+  width: 110px;
+  border-radius: 6px;
+  padding: 10px 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  outline: none;
+  border: none;
+  background: #fff;
+  margin-bottom: 40px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  /* text-decoration: none !important; */
+  /* padding: 0 10px; */
+}
+.change-mode .btn {
+  background: hsl(209, 23%, 22%);
+}
+.btn span {
+  margin-left: 15px;
+  font-size: 16px;
+  color: hsl(200, 15%, 8%);
+  transition: 0.3s ease;
+
+  /* color: red; */
+  /* text-decoration: none !important; */
+}
+.btn i {
+  font-size: 15px;
+}
+.change-mode .btn, .change-mode .btn span {
+  color: #fff;
+}
+.single {
+  width: 90%;
+  margin: auto;
+}
+.country-grid {
+  display: flex;
+}
+.country-flag, .country-info {
+  width: 50%;
+  /* border: 1px solid black; */
+}
+.country-flag img {
+  width: 85%;
+  height: 350px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+}
+.country-info {
+  padding-left: 20px;
+  padding-top: 40px;
+}
+.country-info h2 {
+  font-size: 27px;
+  color: hsl(200, 15%, 8%);
+  transition: 0.3s ease;
+  margin-bottom: 20px;
+}
+.change-mode .country-info h2 {
+  color: #fff;
+}
+.info-flex {
+  display: flex;
+}
+.info-big, .info-small {
+  width: 50%;
+}
+.info-flex p {
+  font-size: 17px;
+  font-weight: 600;
+  padding-bottom: 8px;
+  color: hsl(200, 15%, 8%);
+  transition: 0.3s ease;
+}
+.change-mode .info-flex p {
+  color: #fff;
+}
+.info-flex span {
+  /* color: hsl(0, 0%, 52%); */
+  font-weight: 300;
+}
+
+.fullpage {
+  /* background: red; */
+  background: hsl(0, 0%, 98%);
+  min-height: 89.7vh;
+  /* height: auto; */
+  transition: 0.3s ease;
+}
+.change-mode {
+  background: hsl(207, 26%, 17%);
+}
+
+@media(max-width: 815px){
+ 
+  .country-grid {
+    flex-direction: column;
+  }
+  .country-flag, .country-info {
+    width: 80%;
+    margin: auto;
+    /* border: 1px solid black; */
+  }
+  .country-flag img {
+    width: 100%;
+    /* height: 350px; */
+  }
+}
+
+@media(max-width: 670px){
+  .info-flex {
+    flex-direction: column;
+  }
+  .info-big, .info-small {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .fullpage {
+    height: auto;
+  }
+}
+
+@media(max-width: 500px){
+  .single {
+    width: 85%;
+  }
+  .country-flag, .country-info {
+    width: 100%;
+  }
+  .country-flag img {
+    height: auto;
+  }
+  .country-info {
+    padding-left: 0;
+    padding-top: 30px;
+  }
+}

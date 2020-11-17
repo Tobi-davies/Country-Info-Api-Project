@@ -1,0 +1,79 @@
+.searchBox {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+  margin-bottom: 50px;
+  padding-top: 48px;
+  transition: 0.3s ease;
+}
+.searchInput {
+  position: relative;
+}
+.fa-search {
+  position: absolute;
+  left: 20px;
+  top: 32%;
+  color: hsl(0, 0%, 52%);
+  transition: 0.3s ease;
+}
+.search-dark .fa-search {
+  color: #fff;
+}
+input {
+  width: 400px;
+  height: 40px;
+  padding-left: 60px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+}
+input::placeholder{
+  color: hsl(0, 0%, 52%);
+  transition: 0.3s ease;
+}
+select {
+  width: 180px;
+  height: 40px;
+  /* border: 1px solid black; */
+  padding: 0 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  /* align-items: center; */
+  color: hsl(200, 15%, 8%);
+  outline: none;
+  transition: 0.3s ease;
+}
+option{
+  font-weight: 600;
+  font-weight: 18px;
+}
+option:first-child {
+  margin-top: 5px;
+}
+.search-dark input, .search-dark select {
+  background: hsl(209, 23%, 22%);
+  color: #fff;
+}
+.search-dark input::placeholder{
+  color: #fff;
+}
+
+@media(max-width:685px) {
+  .searchBox {
+    flex-direction: column;
+  }
+
+  input{
+    width: 100%;
+    /* margin-bottom: 30px; */
+  }
+  select {
+    margin-top: 30px;
+  }
+}
