@@ -1,29 +1,23 @@
 import React, {useState, useEffect} from 'react';
-// import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
-import './singlePage.css'
+import './singlePage.css';
+import countries from "i18n-iso-countries";
 
 
 const SinglePage = ({ match, dark }) => {
   const [items, setItem] = useState([])
-  // console.log(dark);
-  
 
-  // console.log(match.params.id);
-  
+  countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
 
   useEffect(() => {
     getCountries();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  })
+  }, [])
   
   const getCountries = () => {
     fetch(`https://restcountries.eu/rest/v2/name/${match.params.id}`)
     .then(response => response.json())
     .then(data => setItem(data))
-
-    // console.log(item);
-    
   }
   return(
     <div className={dark ? 'change-mode fullpage' : 'fullpage'}>
@@ -60,9 +54,15 @@ const SinglePage = ({ match, dark }) => {
                       {item.languages.map(lang => {
                       return lang.name
                     }).join(', ')}
-                    </span></p>
-                    
+                    </span></p> 
                   </div>
+                </div>
+                <div className="fullname">
+                  <p className='border-title'>Border Countries: </p> <span className="fullname-flex">
+                    {item.borders.map(border => {
+                      return <span className='fullname-country'> {countries.getName(border, "en")}</span>
+                    })}
+                    </span>
                 </div>
               </div>
             </div>
@@ -73,32 +73,5 @@ const SinglePage = ({ match, dark }) => {
 }
 
 
-// class SinglePage extends Component {
-//   constructor(){
-//     super();
-//     this.state = { 
-//       items: []
-//      }
-//   }
-   
-//   componentDidMount(){
-//     fetch('https://jsonplaceholder.typicode.com/users')
-//     .then(response => response.json())
-//     .then(users => this.setState({ items: users}))
-//   }
-
-
-//   render() { 
-//     return ( 
-//       <div>
-//         {this.state.items.map(item => (
-//           <h1 key={item.id}> {item.email} </h1>
-//         ))}
-//       </div>
-//      );
-//   }
-// }
- 
-// export default SinglePage;
 
 export default SinglePage;

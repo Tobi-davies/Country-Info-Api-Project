@@ -3,12 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Nunito Sans', sans-serif;
-  /* background: hsl(0, 0%, 98%); */
 }
 
 .App {
-  /* width: 90%;
-  margin: auto; */
   background: hsl(0, 0%, 98%); 
   transition: 0.3s ease;
   min-height: 89.7vh;

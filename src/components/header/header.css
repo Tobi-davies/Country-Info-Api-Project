@@ -38,7 +38,6 @@
   background: hsl(209, 23%, 22%);
   color: #fff;
   box-shadow: 0 3px 5px hsl(207, 26%, 17% , 1) ;
-  /* margin-bottom: 10px; */
 }
 .black span, .black button i {
   color: #fff;
@@ -47,11 +46,7 @@
   .header-list h1 {
     font-size: 20px;
   }
-  /* .header button {
-    font-size: 16px;
-  } */
   .header span {
     margin-left: 1.5px;
-  
   }
 }

@@ -10,8 +10,6 @@
   margin-bottom: 40px;
   cursor: pointer;
   transition: 0.3s ease;
-  /* text-decoration: none !important; */
-  /* padding: 0 10px; */
 }
 .change-mode .btn {
   background: hsl(209, 23%, 22%);
@@ -21,9 +19,6 @@
   font-size: 16px;
   color: hsl(200, 15%, 8%);
   transition: 0.3s ease;
-
-  /* color: red; */
-  /* text-decoration: none !important; */
 }
 .btn i {
   font-size: 15px;
@@ -40,11 +35,11 @@
 }
 .country-flag, .country-info {
   width: 50%;
-  /* border: 1px solid black; */
 }
 .country-flag img {
   width: 85%;
   height: 350px;
+  height: 100%;
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
 }
 .country-info {
@@ -77,20 +72,57 @@
   color: #fff;
 }
 .info-flex span {
-  /* color: hsl(0, 0%, 52%); */
   font-weight: 300;
 }
 
 .fullpage {
-  /* background: red; */
   background: hsl(0, 0%, 98%);
   min-height: 89.7vh;
-  /* height: auto; */
   transition: 0.3s ease;
 }
 .change-mode {
   background: hsl(207, 26%, 17%);
 }
+.border-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: hsl(200, 15%, 8%);
+  transition: 0.3s ease;
+}
+.change-mode .border-title {
+  color: #fff;
+}
+.fullname {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+.fullname-flex {
+  margin-left: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.fullname-flex span {
+  font-weight: 300;
+}
+.fullname-country {
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px 13px 0;
+  padding: 2px;
+  background: hsl(0, 0%, 98%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+}
+.change-mode .fullname-country {
+  background: hsl(209, 23%, 22%);
+  color: #fff;
+}
+
+
 
 @media(max-width: 815px){
  
@@ -100,11 +132,9 @@
   .country-flag, .country-info {
     width: 80%;
     margin: auto;
-    /* border: 1px solid black; */
   }
   .country-flag img {
     width: 100%;
-    /* height: 350px; */
   }
 }
 

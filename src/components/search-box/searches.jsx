@@ -12,8 +12,11 @@ export const Searches = ({ updateSearchField, setContinent, dark }) => {
   }
 
   const continentHandler = (e) => {
-    console.log(e.target.value);
     setContinent(e.target.value)
+
+    if(e.target.value === 'all'){
+      setContinent('')
+    }
   }
   return(
     <div className={dark ? 'search-dark searchBox' : 'searchBox'}>
@@ -43,21 +46,3 @@ export const Searches = ({ updateSearchField, setContinent, dark }) => {
   )
 }
 
-//             type="text" 
-//             name="text" 
-//             placeholder='Search for a country...' 
-//             // console.log(this.state);
-//             onChange={e => this.setState({searchField: e.target.value})}
-//             />
-//           <div className="select">
-//             <select onChange={continentHandler} name="continent" className='continent'>
-//               <option>Filter by Region</option>
-//               <option value="africa">Africa</option>
-//               <option value='americas'>Americas</option>
-//               <option value="asia">Asia</option>
-//               <option value="europe">Europe</option>
-//               <option value="oceania">Oceania</option>
-//               <option value="All">All</option>
-//             </select>
-//           </div>
-//         </div></div>
